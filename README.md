@@ -107,7 +107,7 @@ Predict match-winning probability using Machine Learning.
 ![Venue](images/venue.png)
 
 ### ⚔️ Head-to-Head Analysis
-![Head to Head](images/head_to_head.png)
+![Head to Head](images/h2h.png)
 
 ### 🤖 Win Predictor
 ![Predictor](images/predictor.png)
