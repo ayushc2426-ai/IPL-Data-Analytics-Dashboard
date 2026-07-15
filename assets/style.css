@@ -1,0 +1,135 @@
+/* ------------------------------
+   Streamlit UI Cleanup
+------------------------------ */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* Keep header so sidebar toggle works */
+header[data-testid="stHeader"] {
+    background: rgba(0,0,0,0);
+}
+
+/* ------------------------------
+   Main App
+------------------------------ */
+
+.stApp{
+    background: linear-gradient(135deg,#0B1120,#111827);
+}
+
+/* ------------------------------
+   Container
+------------------------------ */
+
+.block-container{
+    padding:2rem 3rem;
+}
+
+/* ------------------------------
+   Sidebar
+------------------------------ */
+
+section[data-testid="stSidebar"]{
+    background:#111827;
+    border-right:1px solid #334155;
+}
+
+/* ------------------------------
+   Headings
+------------------------------ */
+
+h1,h2,h3,h4{
+    color:white;
+}
+
+/* ------------------------------
+   Metric Cards
+------------------------------ */
+
+div[data-testid="metric-container"]{
+
+    background:#162032;
+
+    border-radius:18px;
+
+    border:1px solid #334155;
+
+    padding:22px;
+
+    transition:.35s;
+
+}
+
+div[data-testid="metric-container"]:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 28px rgba(255,107,0,.35);
+
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+.stButton>button{
+
+    background:#FF6B00;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    height:52px;
+
+    font-weight:700;
+
+    width:100%;
+
+}
+
+.stButton>button:hover{
+
+    background:#ff8c42;
+
+}
+
+/* ------------------------------
+   Tabs
+------------------------------ */
+
+button[data-baseweb="tab"]{
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+/* ------------------------------
+   Tables
+------------------------------ */
+
+div[data-testid="stDataFrame"]{
+
+    border-radius:16px;
+
+}
+
+/* ------------------------------
+   Divider
+------------------------------ */
+
+hr{
+
+    margin:30px 0;
+
+}
