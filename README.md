@@ -89,6 +89,30 @@ Predict match-winning probability using Machine Learning.
 - deliveries.csv
 
 ---
+## 📸 Dashboard Preview
+
+### 🏠 Home
+![Home](images/home.png)
+
+### 👥 Team Analysis
+![Team](images/team.png)
+
+### 🏏 Batsman Analysis
+![Batsman](images/batsman.png)
+
+### 🎯 Bowler Analysis
+![Bowler](images/bowler.png)
+
+### 🏟 Venue Analysis
+![Venue](images/venue.png)
+
+### ⚔️ Head-to-Head Analysis
+![Head to Head](images/head_to_head.png)
+
+### 🤖 Win Predictor
+![Predictor](images/predictor.png)
+
+---
 
 ## ▶️ How to Run
 
@@ -107,7 +131,7 @@ pip install -r requirements.txt
 Run the application
 
 ```bash
-streamlit run app.py
+streamlit run 🏠_Home.py
 ```
 
 ---
