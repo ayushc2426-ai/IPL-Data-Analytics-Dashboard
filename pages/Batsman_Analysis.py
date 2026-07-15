@@ -20,18 +20,18 @@ st.sidebar.title("🏏 IPL Dashboard")
 
 st.sidebar.markdown("---")
 
-st.sidebar.success("Made with ❤️ using Streamlit")
+st.sidebar.success("Made by Ayush C using Streamlit")
 
 # -----------------------------------
 # Page Config
 # -----------------------------------
 st.set_page_config(
-    page_title="Player Analysis",
-    page_icon="👤",
+    page_title="Batsman Analysis",
+    page_icon="🏏",
     layout="wide"
 )
 
-st.title("👤 Player Analysis")
+st.title("🏏 Batsman Analysis")
 
 # -----------------------------------
 # Load Data
@@ -90,6 +90,23 @@ st.divider()
 # -----------------------------------
 # Runs by Season
 # -----------------------------------
+
+def update_chart(fig):
+    fig.update_layout(
+        template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(
+            family="Poppins",
+            size=15,
+            color="white"
+        ),
+        title_x=0.5,
+        margin=dict(l=20, r=20, t=50, b=20)
+    )
+
+    return fig
+
 season_runs = (
     player.groupby("season")["batsman_runs"]
     .sum()

@@ -57,16 +57,16 @@ matches, deliveries = load_data()
 # -------------------------
 
 st.markdown("""
-# 🏏 IPL Analytics Dashboard
+<div class="hero">
 
-### End-to-End AI & Data Science Project
+<h1>🏏 IPL Analytics Dashboard</h1>
 
-Analyze Teams • Players • Venues • Match Predictions
-""")
+<p>
+End-to-End Data Analytics & Machine Learning Project
+</p>
 
-st.success("🚀 Welcome to the Professional IPL Analytics Dashboard")
-
-st.markdown("---")
+</div>
+""",unsafe_allow_html=True)
 
 # ==========================
 # KPI Cards
@@ -112,6 +112,21 @@ st.markdown("---")
 # Two Column Layout
 # ==========================
 
+def update_chart(fig):
+    fig.update_layout(
+        template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(
+            family="Poppins",
+            size=15,
+            color="white"
+        ),
+        title_x=0.5,
+        margin=dict(l=20, r=20, t=50, b=20)
+    )
+
+    return fig
 left, right = st.columns([2,1])
 
 # --------------------------

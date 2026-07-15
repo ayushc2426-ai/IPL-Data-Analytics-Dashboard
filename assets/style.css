@@ -1,135 +1,301 @@
-/* ------------------------------
-   Streamlit UI Cleanup
------------------------------- */
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-#MainMenu {
-    visibility: hidden;
+/* ===========================
+   GLOBAL
+=========================== */
+
+html, body, [class*="css"]{
+    font-family:'Poppins',sans-serif;
 }
-
-footer {
-    visibility: hidden;
-}
-
-/* Keep header so sidebar toggle works */
-header[data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
-}
-
-/* ------------------------------
-   Main App
------------------------------- */
 
 .stApp{
-    background: linear-gradient(135deg,#0B1120,#111827);
+    background:
+    linear-gradient(
+    135deg,
+    #07111F 0%,
+    #0F172A 45%,
+    #111827 100%);
 }
 
-/* ------------------------------
-   Container
------------------------------- */
+/* ===========================
+   HEADER
+=========================== */
 
-.block-container{
-    padding:2rem 3rem;
+header{
+    background:transparent;
 }
 
-/* ------------------------------
-   Sidebar
------------------------------- */
+#MainMenu{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+/* DO NOT HIDE HEADER */
+/* Otherwise sidebar toggle disappears */
+
+/* ===========================
+   SIDEBAR
+=========================== */
 
 section[data-testid="stSidebar"]{
-    background:#111827;
-    border-right:1px solid #334155;
+
+background:#0D1628;
+
+border-right:1px solid #243047;
+
 }
 
-/* ------------------------------
-   Headings
------------------------------- */
+section[data-testid="stSidebar"] img{
 
-h1,h2,h3,h4{
-    color:white;
+display:block;
+
+margin:auto;
+
 }
 
-/* ------------------------------
-   Metric Cards
------------------------------- */
+section[data-testid="stSidebar"] h1{
+
+font-size:28px;
+
+font-weight:700;
+
+text-align:center;
+
+}
+
+section[data-testid="stSidebar"]{
+
+padding-top:20px;
+
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.block-container{
+
+padding-top:2rem;
+
+padding-left:3rem;
+
+padding-right:3rem;
+
+padding-bottom:2rem;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+background:
+
+linear-gradient(135deg,#FF6B00,#ff9d2f);
+
+padding:35px;
+
+border-radius:22px;
+
+color:white;
+
+box-shadow:0 10px 30px rgba(255,107,0,.25);
+
+margin-bottom:25px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+font-weight:800;
+
+margin-bottom:5px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+opacity:.95;
+
+}
+
+/* ===========================
+   KPI CARDS
+=========================== */
 
 div[data-testid="metric-container"]{
 
-    background:#162032;
+background:rgba(255,255,255,.04);
 
-    border-radius:18px;
+backdrop-filter:blur(15px);
 
-    border:1px solid #334155;
+border:1px solid rgba(255,255,255,.08);
 
-    padding:22px;
+border-radius:20px;
 
-    transition:.35s;
+padding:20px;
+
+transition:.35s;
 
 }
 
 div[data-testid="metric-container"]:hover{
 
-    transform:translateY(-6px);
+transform:translateY(-8px);
 
-    box-shadow:0 12px 28px rgba(255,107,0,.35);
+box-shadow:
+
+0 10px 35px rgba(255,107,0,.35);
+
+border:1px solid #FF6B00;
 
 }
 
-/* ------------------------------
-   Buttons
------------------------------- */
+/* ===========================
+   CHARTS
+=========================== */
+
+.js-plotly-plot{
+
+border-radius:18px;
+
+overflow:hidden;
+
+background:#162032;
+
+padding:8px;
+
+}
+
+/* ===========================
+   TABLES
+=========================== */
+
+div[data-testid="stDataFrame"]{
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid #29364D;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
 
 .stButton>button{
 
-    background:#FF6B00;
+background:#FF6B00;
 
-    color:white;
+color:white;
 
-    border:none;
+border:none;
 
-    border-radius:12px;
+border-radius:12px;
 
-    height:52px;
+font-size:17px;
 
-    font-weight:700;
+font-weight:700;
 
-    width:100%;
+height:52px;
+
+transition:.3s;
 
 }
 
 .stButton>button:hover{
 
-    background:#ff8c42;
+background:#ff8f2b;
+
+transform:scale(1.02);
 
 }
 
-/* ------------------------------
-   Tabs
------------------------------- */
+/* ===========================
+   TABS
+=========================== */
 
 button[data-baseweb="tab"]{
 
-    font-size:17px;
+font-size:17px;
 
-    font-weight:600;
-
-}
-
-/* ------------------------------
-   Tables
------------------------------- */
-
-div[data-testid="stDataFrame"]{
-
-    border-radius:16px;
+font-weight:600;
 
 }
 
-/* ------------------------------
-   Divider
------------------------------- */
+/* ===========================
+   SELECTBOX
+=========================== */
 
-hr{
+.stSelectbox{
 
-    margin:30px 0;
+margin-bottom:10px;
 
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+
+text-align:center;
+
+padding:20px;
+
+font-size:15px;
+
+color:#BFC8D6;
+
+}
+/* ===========================
+   PREMIUM KPI CARDS
+=========================== */
+
+.kpi-card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:18px;
+padding:22px;
+text-align:center;
+transition:0.35s;
+height:150px;
+}
+
+.kpi-card:hover{
+transform:translateY(-8px);
+box-shadow:0px 12px 30px rgba(255,107,0,.35);
+border:1px solid #FF6B00;
+}
+
+.kpi-icon{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.kpi-title{
+font-size:16px;
+color:#BFC8D6;
+}
+
+.kpi-value{
+font-size:34px;
+font-weight:700;
+color:white;
+margin-top:8px;
 }

@@ -112,6 +112,22 @@ st.divider()
 # Tabs
 # ==========================================
 
+def update_chart(fig):
+    fig.update_layout(
+        template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(
+            family="Poppins",
+            size=15,
+            color="white"
+        ),
+        title_x=0.5,
+        margin=dict(l=20, r=20, t=50, b=20)
+    )
+
+    return fig
+
 tab1, tab2, tab3 = st.tabs(
     [
         "📊 Overview",
